@@ -20,7 +20,7 @@ import Footer from "@/components/Footer";
 import BookingWidget from "@/components/BookingWidget";
 import AnimatedSection from "@/components/AnimatedSection";
 
-// ─── Data ──────────────────────────────────────────────────────────────────
+// ─── Data ───────────────────────────────────────────────────────────────────
 
 const properties = [
   {
@@ -37,6 +37,7 @@ const properties = [
     features: ["オーシャンビュー", "プライベートBBQ", "ペット可"],
     price: "¥45,000〜 / 泊",
     badge: "人気No.1",
+    rating: "4.9",
   },
   {
     id: "aniversario",
@@ -52,6 +53,7 @@ const properties = [
     features: ["プライベートジャグジー", "記念日演出", "ウェルカムフルーツ"],
     price: "¥38,000〜 / 泊",
     badge: "記念日におすすめ",
+    rating: "5.0",
   },
 ];
 
@@ -128,16 +130,40 @@ const stats = [
   { value: "4.9", label: "平均レビュー評価" },
 ];
 
-// ─── Page ──────────────────────────────────────────────────────────────────
+const reviews = [
+  {
+    name: "田中 M.",
+    from: "東京都",
+    text: "プライベート感が最高でした。海まで歩いてすぐで、夕日を見ながらBBQができて最高の思い出になりました。リピート確定です。",
+    rating: 5,
+    property: "Sharrows",
+  },
+  {
+    name: "鈴木 K.",
+    from: "大阪府",
+    text: "記念日で利用しました。ウェルカムフルーツや細かい気遣いに感動。プライベートジャグジーで2人だけの特別な時間が過ごせました。",
+    rating: 5,
+    property: "Aniversario",
+  },
+  {
+    name: "Yuki & Family",
+    from: "神奈川県",
+    text: "家族4人で利用。子供も大喜びで、広さも十分。キッチンが充実していて自炊もしやすく、沖縄の食材を買い込んで楽しみました。",
+    rating: 5,
+    property: "Sharrows",
+  },
+];
+
+// ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
-        {/* ── Hero ─────────────────────────────────────────────── */}
+
+        {/* ① ヒーローセクション ──────────────────────────────────── */}
         <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-          {/* Background image */}
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1540202404-1b927e27fa8b?w=1920&q=85"
@@ -149,7 +175,6 @@ export default function HomePage() {
             <div className="hero-overlay absolute inset-0" />
           </div>
 
-          {/* Content */}
           <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
             <p className="text-[11px] tracking-[0.4em] uppercase text-gold-light mb-6 animate-fade-in">
               Okinawa · Private Villa Experience
@@ -179,7 +204,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Scroll indicator */}
+          {/* スクロール誘導 */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
             <span className="text-white/40 text-[9px] tracking-[0.3em] uppercase">
               Scroll
@@ -188,21 +213,21 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Booking Bar ──────────────────────────────────────── */}
+        {/* ② 簡易予約バー ──────────────────────────────────────── */}
         <section className="bg-sand-light border-b border-sand-dark">
           <div className="max-w-5xl mx-auto px-6 py-4">
             <BookingWidget compact />
           </div>
         </section>
 
-        {/* ── Stats ────────────────────────────────────────────── */}
+        {/* ③ 実績数値バー ──────────────────────────────────────── */}
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {stats.map((stat, i) => (
                 <AnimatedSection key={stat.label} delay={i * 100}>
                   <div>
-                    <p className="font-serif text-4xl font-light text-ocean-DEFAULT mb-2">
+                    <p className="font-serif text-4xl font-light text-ocean mb-2">
                       {stat.value}
                     </p>
                     <p className="text-[11px] tracking-[0.15em] uppercase text-gray-500">
@@ -215,15 +240,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Properties ───────────────────────────────────────── */}
-        <section
-          id="properties"
-          className="py-24 bg-sand-light"
-        >
+        {/* ④ 施設紹介セクション ────────────────────────────────── */}
+        <section id="properties" className="py-24 bg-sand-light">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-3">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
                   Our Properties
                 </p>
                 <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-5">
@@ -239,15 +261,12 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {properties.map((property, i) => (
-                <AnimatedSection
-                  key={property.id}
-                  delay={i * 150}
-                >
+                <AnimatedSection key={property.id} delay={i * 150}>
                   <Link
                     href={property.href}
                     className="group block card-hover bg-white overflow-hidden shadow-lg"
                   >
-                    {/* Image */}
+                    {/* 画像 */}
                     <div className="property-img-wrapper relative h-72 overflow-hidden">
                       <Image
                         src={property.image}
@@ -255,11 +274,9 @@ export default function HomePage() {
                         fill
                         className="object-cover property-img"
                       />
-                      {/* Badge */}
-                      <div className="absolute top-4 left-4 bg-gold-DEFAULT text-white text-[10px] tracking-[0.2em] uppercase px-3 py-1.5">
+                      <div className="absolute top-4 left-4 bg-gold text-white text-[10px] tracking-[0.2em] uppercase px-3 py-1.5">
                         {property.badge}
                       </div>
-                      {/* Price */}
                       <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2">
                         <p className="text-ocean-dark font-medium text-sm">
                           {property.price}
@@ -267,9 +284,9 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    {/* Content */}
+                    {/* コンテンツ */}
                     <div className="p-8">
-                      <p className="text-[10px] tracking-[0.25em] uppercase text-gold-DEFAULT mb-2">
+                      <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">
                         {property.tagline}
                       </p>
                       <h3 className="font-serif text-3xl text-ocean-dark mb-3 group-hover:text-ocean-light transition-colors">
@@ -279,39 +296,36 @@ export default function HomePage() {
                         {property.description}
                       </p>
 
-                      {/* Meta */}
                       <div className="flex items-center gap-4 text-[11px] text-gray-500 mb-5">
                         <span className="flex items-center gap-1">
-                          <MapPin size={12} className="text-ocean-DEFAULT" />
+                          <MapPin size={12} className="text-ocean" />
                           沖縄・恩納村
                         </span>
                         <span>{property.capacity}</span>
                         <span>{property.bedrooms}</span>
                       </div>
 
-                      {/* Features */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {property.features.map((f) => (
                           <span
                             key={f}
-                            className="text-[10px] tracking-wide border border-ocean-DEFAULT/20 text-ocean-DEFAULT px-3 py-1"
+                            className="text-[10px] tracking-wide border border-ocean/20 text-ocean px-3 py-1"
                           >
                             {f}
                           </span>
                         ))}
                       </div>
 
-                      {/* CTA */}
                       <div className="flex items-center justify-between border-t border-gray-100 pt-5">
-                        <span className="flex items-center gap-1 text-[11px] text-gold-DEFAULT">
-                          <Star size={12} fill="currentColor" />
-                          <Star size={12} fill="currentColor" />
-                          <Star size={12} fill="currentColor" />
-                          <Star size={12} fill="currentColor" />
-                          <Star size={12} fill="currentColor" />
-                          <span className="ml-1 text-gray-500">4.9</span>
+                        <span className="flex items-center gap-1 text-[11px] text-gold">
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <Star key={j} size={12} fill="currentColor" />
+                          ))}
+                          <span className="ml-1 text-gray-500">
+                            {property.rating}
+                          </span>
                         </span>
-                        <span className="flex items-center gap-1 text-[11px] tracking-[0.15em] uppercase text-ocean-DEFAULT group-hover:text-ocean-light transition-colors font-medium">
+                        <span className="flex items-center gap-1 text-[11px] tracking-[0.15em] uppercase text-ocean group-hover:text-ocean-light transition-colors font-medium">
                           詳細・予約
                           <ArrowRight
                             size={13}
@@ -327,11 +341,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── About ────────────────────────────────────────────── */}
+        {/* ⑤ 会社概要セクション ───────────────────────────────── */}
         <section id="about" className="py-24 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              {/* Image collage */}
+              {/* 写真コラージュ */}
               <AnimatedSection>
                 <div className="relative h-[500px]">
                   <div className="absolute top-0 left-0 w-3/4 h-3/4 overflow-hidden shadow-xl">
@@ -350,15 +364,14 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  {/* Accent */}
-                  <div className="absolute bottom-8 left-8 w-24 h-24 bg-gold-DEFAULT/10 border border-gold-DEFAULT/30" />
+                  <div className="absolute bottom-8 left-8 w-24 h-24 bg-gold/10 border border-gold/30" />
                 </div>
               </AnimatedSection>
 
-              {/* Text */}
+              {/* テキスト */}
               <AnimatedSection delay={200}>
                 <div>
-                  <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-4">
+                  <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">
                     About Us
                   </p>
                   <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-4 leading-tight">
@@ -383,7 +396,7 @@ export default function HomePage() {
                       "DX推進・システム導入",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-gold-DEFAULT rounded-full shrink-0" />
+                        <div className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
                         <span className="text-sm text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -398,12 +411,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Services ─────────────────────────────────────────── */}
+        {/* ⑥ 事業内容セクション ───────────────────────────────── */}
         <section id="services" className="py-24 bg-ocean-dark text-white">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-3">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
                   Our Services
                 </p>
                 <h2 className="heading-display text-4xl md:text-5xl text-white mb-5">
@@ -419,12 +432,9 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, i) => (
                 <AnimatedSection key={service.title} delay={i * 100}>
-                  <div className="p-8 border border-white/10 hover:border-gold-DEFAULT/40 transition-all duration-500 group h-full">
-                    <div className="w-12 h-12 border border-gold-DEFAULT/30 flex items-center justify-center mb-6 group-hover:border-gold-DEFAULT transition-colors">
-                      <service.icon
-                        size={22}
-                        className="text-gold-DEFAULT"
-                      />
+                  <div className="p-8 border border-white/10 hover:border-gold/40 transition-all duration-500 group h-full">
+                    <div className="w-12 h-12 border border-gold/30 flex items-center justify-center mb-6 group-hover:border-gold transition-colors">
+                      <service.icon size={22} className="text-gold" />
                     </div>
                     <h3 className="font-serif text-xl text-white mb-3">
                       {service.title}
@@ -439,12 +449,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Amenities Highlight ──────────────────────────────── */}
+        {/* ⑦ 設備ハイライト ──────────────────────────────────── */}
         <section className="py-24 bg-sand-light">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-3">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
                   Amenities
                 </p>
                 <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-5">
@@ -459,18 +469,14 @@ export default function HomePage() {
                 { icon: Wifi, label: "高速Wi-Fi", sub: "無料・全室完備" },
                 { icon: Car, label: "無料駐車場", sub: "敷地内・屋根付き" },
                 { icon: Waves, label: "ビーチ徒歩圏", sub: "徒歩5分以内" },
-                {
-                  icon: UtensilsCrossed,
-                  label: "フルキッチン",
-                  sub: "調理器具一式",
-                },
+                { icon: UtensilsCrossed, label: "フルキッチン", sub: "調理器具一式" },
               ].map((item, i) => (
                 <AnimatedSection key={item.label} delay={i * 100}>
                   <div className="text-center group">
-                    <div className="w-16 h-16 mx-auto mb-4 border border-ocean-DEFAULT/20 flex items-center justify-center group-hover:bg-ocean-DEFAULT group-hover:border-ocean-DEFAULT transition-all duration-300">
+                    <div className="w-16 h-16 mx-auto mb-4 border border-ocean/20 flex items-center justify-center group-hover:bg-ocean group-hover:border-ocean transition-all duration-300">
                       <item.icon
                         size={24}
-                        className="text-ocean-DEFAULT group-hover:text-white transition-colors"
+                        className="text-ocean group-hover:text-white transition-colors"
                       />
                     </div>
                     <p className="font-medium text-ocean-dark text-sm mb-1">
@@ -484,12 +490,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Instagram ────────────────────────────────────────── */}
+        {/* ⑧ Instagramグリッド ────────────────────────────────── */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-12">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-3">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
                   Instagram
                 </p>
                 <h2 className="heading-display text-4xl text-ocean-dark mb-4">
@@ -501,7 +507,6 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
 
-            {/* Grid */}
             <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-8">
               {instagramPosts.map((post, i) => (
                 <AnimatedSection key={post.id} delay={i * 60}>
@@ -542,12 +547,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Testimonials ─────────────────────────────────────── */}
+        {/* ⑨ ゲストレビュー ──────────────────────────────────── */}
         <section className="py-24 bg-sand-light">
           <div className="max-w-5xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold-DEFAULT mb-3">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
                   Guest Reviews
                 </p>
                 <h2 className="heading-display text-4xl text-ocean-dark mb-5">
@@ -558,29 +563,7 @@ export default function HomePage() {
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: "田中 M.",
-                  from: "東京都",
-                  text: "プライベート感が最高でした。海まで歩いてすぐで、夕日を見ながらBBQができて最高の思い出になりました。リピート確定です。",
-                  rating: 5,
-                  property: "Sharrows",
-                },
-                {
-                  name: "鈴木 K.",
-                  from: "大阪府",
-                  text: "記念日で利用しました。ウェルカムフルーツや細かい気遣いに感動。プライベートジャグジーで2人だけの特別な時間が過ごせました。",
-                  rating: 5,
-                  property: "Aniversario",
-                },
-                {
-                  name: "Yuki & Family",
-                  from: "神奈川県",
-                  text: "家族4人で利用。子供も大喜びで、広さも十分。キッチンが充実していて自炊もしやすく、沖縄の食材を買い込んで楽しみました。",
-                  rating: 5,
-                  property: "Sharrows",
-                },
-              ].map((review, i) => (
+              {reviews.map((review, i) => (
                 <AnimatedSection key={review.name} delay={i * 100}>
                   <div className="bg-white p-8 shadow-sm h-full flex flex-col">
                     <div className="flex items-center gap-1 mb-4">
@@ -589,7 +572,7 @@ export default function HomePage() {
                           key={j}
                           size={13}
                           fill="#c9a84c"
-                          className="text-gold-DEFAULT"
+                          className="text-gold"
                         />
                       ))}
                     </div>
@@ -603,7 +586,7 @@ export default function HomePage() {
                         </p>
                         <p className="text-gray-400 text-xs">{review.from}</p>
                       </div>
-                      <span className="text-[10px] text-gold-DEFAULT border border-gold-DEFAULT/30 px-2 py-1">
+                      <span className="text-[10px] text-gold border border-gold/30 px-2 py-1">
                         {review.property}
                       </span>
                     </div>
@@ -614,7 +597,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Contact CTA ──────────────────────────────────────── */}
+        {/* ⑩ お問い合わせCTA ─────────────────────────────────── */}
         <section
           id="contact"
           className="relative py-28 flex items-center justify-center overflow-hidden"
@@ -641,10 +624,7 @@ export default function HomePage() {
                 担当者より2営業日以内にご連絡いたします。
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="mailto:info@gooddaymate.jp"
-                  className="btn-gold"
-                >
+                <a href="mailto:info@gooddaymate.jp" className="btn-gold">
                   メールで問い合わせる
                   <ChevronRight size={16} />
                 </a>
@@ -661,6 +641,7 @@ export default function HomePage() {
             </AnimatedSection>
           </div>
         </section>
+
       </main>
       <Footer />
     </>

@@ -21,12 +21,10 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* Smooth scroll offset for fixed header */
 [id] {
   scroll-margin-top: 80px;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -38,7 +36,6 @@ body {
   border-radius: 3px;
 }
 
-/* Typography utilities */
 .heading-display {
   @apply font-serif font-light tracking-wide;
 }
@@ -57,7 +54,6 @@ body {
   background-clip: text;
 }
 
-/* Section transitions */
 .section-fade {
   opacity: 0;
   transform: translateY(20px);
@@ -69,26 +65,24 @@ body {
   transform: translateY(0);
 }
 
-/* Button styles */
 .btn-primary {
-  @apply inline-flex items-center gap-2 px-8 py-4 bg-ocean text-white font-medium tracking-wider uppercase text-sm;
+  @apply inline-flex items-center gap-2 px-8 py-4 bg-ocean text-white font-medium uppercase text-sm;
   @apply hover:bg-ocean-light transition-all duration-300;
   letter-spacing: 0.12em;
 }
 
 .btn-outline {
-  @apply inline-flex items-center gap-2 px-8 py-4 border border-ocean text-ocean font-medium tracking-wider uppercase text-sm;
+  @apply inline-flex items-center gap-2 px-8 py-4 border border-ocean text-ocean font-medium uppercase text-sm;
   @apply hover:bg-ocean hover:text-white transition-all duration-300;
   letter-spacing: 0.12em;
 }
 
 .btn-gold {
-  @apply inline-flex items-center gap-2 px-8 py-4 bg-gold text-white font-medium tracking-wider uppercase text-sm;
+  @apply inline-flex items-center gap-2 px-8 py-4 bg-gold text-white font-medium uppercase text-sm;
   @apply hover:bg-gold-dark transition-all duration-300;
   letter-spacing: 0.12em;
 }
 
-/* Card hover effects */
 .card-hover {
   @apply transition-all duration-500;
 }
@@ -97,12 +91,10 @@ body {
   @apply -translate-y-1 shadow-2xl;
 }
 
-/* Divider */
 .divider-gold {
   @apply w-16 h-0.5 bg-gold;
 }
 
-/* Hero overlay */
 .hero-overlay {
   background: linear-gradient(
     to bottom,
@@ -112,7 +104,6 @@ body {
   );
 }
 
-/* Property card image zoom */
 .property-img {
   @apply transition-transform duration-700;
 }

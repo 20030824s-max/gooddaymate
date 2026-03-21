@@ -43,7 +43,7 @@ export default function Header() {
           </span>
           <span
             className={`text-[10px] font-sans tracking-[0.25em] uppercase transition-colors duration-300 ${
-              isScrolled ? "text-gold-DEFAULT" : "text-gold-light"
+              isScrolled ? "text-gold" : "text-gold-light"
             }`}
           >
             Okinawa Luxury Stay
@@ -67,7 +67,7 @@ export default function Header() {
             href="#properties"
             className={`text-[11px] font-sans tracking-[0.2em] uppercase px-5 py-2.5 border transition-all duration-300 ${
               isScrolled
-                ? "border-ocean-DEFAULT text-ocean-DEFAULT hover:bg-ocean-DEFAULT hover:text-white"
+                ? "border-ocean text-ocean hover:bg-ocean hover:text-white"
                 : "border-white/60 text-white hover:border-white hover:bg-white/10"
             }`}
           >

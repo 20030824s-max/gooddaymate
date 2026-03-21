@@ -20,19 +20,12 @@ export default function BookingWidget({
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-
-    // TODO: Integrate with booking engine (Beds24 recommended)
-    // Option A: Beds24 API - https://beds24.com/api/v2/
-    // Option B: STAYNAVI - https://staynavi.direct/
-    // For now, redirect to contact form or OTA with pre-filled dates
     const params = new URLSearchParams({
       checkin: checkIn,
       checkout: checkOut,
       guests: guests.toString(),
       ...(propertyId && { property: propertyId }),
     });
-
-    // Placeholder: opens contact or booking page
     window.location.href = `#contact?${params.toString()}`;
   };
 
@@ -55,7 +48,7 @@ export default function BookingWidget({
               type="date"
               value={checkIn}
               onChange={(e) => setCheckIn(e.target.value)}
-              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT bg-sand-light"
+              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean bg-sand-light"
               required
             />
           </div>
@@ -73,7 +66,7 @@ export default function BookingWidget({
               type="date"
               value={checkOut}
               onChange={(e) => setCheckOut(e.target.value)}
-              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT bg-sand-light"
+              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean bg-sand-light"
               required
             />
           </div>
@@ -90,7 +83,7 @@ export default function BookingWidget({
             <select
               value={guests}
               onChange={(e) => setGuests(Number(e.target.value))}
-              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT bg-sand-light appearance-none"
+              className="w-full pl-9 pr-3 py-3 border border-gray-200 text-sm focus:outline-none focus:border-ocean bg-sand-light appearance-none"
             >
               {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <option key={n} value={n}>
@@ -102,7 +95,7 @@ export default function BookingWidget({
         </div>
         <button
           type="submit"
-          className="btn-primary whitespace-nowrap h-[46px] mt-0"
+          className="btn-primary whitespace-nowrap h-[46px]"
         >
           空き確認
           <ChevronRight size={15} />
@@ -134,7 +127,7 @@ export default function BookingWidget({
                 type="date"
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT"
+                className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean"
                 required
               />
             </div>
@@ -152,7 +145,7 @@ export default function BookingWidget({
                 type="date"
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT"
+                className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean"
                 required
               />
             </div>
@@ -171,7 +164,7 @@ export default function BookingWidget({
             <select
               value={guests}
               onChange={(e) => setGuests(Number(e.target.value))}
-              className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean-DEFAULT appearance-none"
+              className="w-full pl-9 pr-3 py-3.5 border border-gray-200 text-sm focus:outline-none focus:border-ocean appearance-none"
             >
               {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <option key={n} value={n}>
