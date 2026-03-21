@@ -71,19 +71,19 @@ body {
 
 /* Button styles */
 .btn-primary {
-  @apply inline-flex items-center gap-2 px-8 py-4 bg-ocean-DEFAULT text-white font-medium tracking-wider uppercase text-sm;
+  @apply inline-flex items-center gap-2 px-8 py-4 bg-ocean text-white font-medium tracking-wider uppercase text-sm;
   @apply hover:bg-ocean-light transition-all duration-300;
   letter-spacing: 0.12em;
 }
 
 .btn-outline {
-  @apply inline-flex items-center gap-2 px-8 py-4 border border-ocean-DEFAULT text-ocean-DEFAULT font-medium tracking-wider uppercase text-sm;
-  @apply hover:bg-ocean-DEFAULT hover:text-white transition-all duration-300;
+  @apply inline-flex items-center gap-2 px-8 py-4 border border-ocean text-ocean font-medium tracking-wider uppercase text-sm;
+  @apply hover:bg-ocean hover:text-white transition-all duration-300;
   letter-spacing: 0.12em;
 }
 
 .btn-gold {
-  @apply inline-flex items-center gap-2 px-8 py-4 bg-gold-DEFAULT text-white font-medium tracking-wider uppercase text-sm;
+  @apply inline-flex items-center gap-2 px-8 py-4 bg-gold text-white font-medium tracking-wider uppercase text-sm;
   @apply hover:bg-gold-dark transition-all duration-300;
   letter-spacing: 0.12em;
 }
@@ -99,7 +99,7 @@ body {
 
 /* Divider */
 .divider-gold {
-  @apply w-16 h-0.5 bg-gold-DEFAULT;
+  @apply w-16 h-0.5 bg-gold;
 }
 
 /* Hero overlay */
