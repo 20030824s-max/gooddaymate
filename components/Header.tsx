@@ -46,7 +46,7 @@ export default function Header() {
               isScrolled ? "text-gold" : "text-gold-light"
             }`}
           >
-            Okinawa Luxury Stay
+            Business Execution
           </span>
         </Link>
 

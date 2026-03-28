@@ -120,25 +120,25 @@ export default function HomePage() {
 
           <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
             <p className="text-[11px] tracking-[0.4em] uppercase text-gold-light mb-6 animate-fade-in">
-              Kanto &amp; Okinawa · Total Resort Management
+              Good Day Mate · Business Execution
             </p>
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-tight tracking-wide mb-6 animate-slide-up">
-              リゾートの未来を、
+              事業を、
               <br />
-              ともにつくる
+              まるごと動かす。
             </h1>
             <p className="text-white/80 text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
-              企画・設計からオペレーションまで。
+              企画・開発・運営・DX。
               <br />
-              Good Day Mateが、宿泊・リゾート事業をトータルで支えます。
+              業種を問わず、Good Day Mateが事業の現場を担います。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#properties" className="btn-gold">
-                運営施設を見る
+              <a href="#achievements" className="btn-gold">
+                実績を見る
                 <ChevronRight size={16} />
               </a>
               <a
-                href="#about"
+                href="#services"
                 className="inline-flex items-center gap-2 text-white/80 text-sm tracking-wider hover:text-white transition-colors"
               >
                 事業内容
@@ -187,19 +187,19 @@ export default function HomePage() {
                     About Us
                   </p>
                   <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-4 leading-tight">
-                    関東・沖縄を拠点に、
+                    考えるだけでなく、
                     <br />
-                    リゾートをつくる
+                    動く。
                   </h2>
                   <div className="divider-gold mb-8" />
                   <p className="text-gray-700 leading-relaxed mb-5">
-                    Good Day Mateは、関東圏と沖縄を拠点に、宿泊施設・カラオケバーなどの「立ち上げ・トータル運営」を行う会社です。
-                    沖縄恩納村のプライベートヴィラ2棟（Villa Shallows・Aniversario）や、東京・新橋のカラオケバー「PORCO」など、
-                    コンセプト策定から日々のオペレーションまで一貫して担います。
+                    Good Day Mateは、関東・沖縄を拠点に「事業をまるごと動かす」会社です。
+                    宿泊ヴィラの自社運営、カラオケバーの立ち上げ、グランピング施設のプロデュースなど、
+                    机上の提案ではなく、自分たちが現場に入り込んで実行してきた実績があります。
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-8">
-                    グランピング施設のプロデュース（HOLE37・茨城）、ゴルフ場の経営コンサル、新業態の開発など、
-                    リゾート・娯楽領域における幅広い実績があります。
+                    ゴルフ場の経営コンサルから中小企業のDX化まで、業種を問わず対応。
+                    「やりたいことがある」「現状を変えたい」というオーナーの思いを、実行に変えます。
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[

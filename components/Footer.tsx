@@ -15,13 +15,13 @@ export default function Footer() {
                 Good Day Mate
               </p>
               <p className="text-[10px] tracking-[0.25em] uppercase text-gold mt-1">
-                Okinawa Luxury Stay
+                Business Execution
               </p>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mt-4">
-              沖縄の豊かな自然と文化に囲まれた、
+              企画・開発・運営・DX。
               <br />
-              プライベートな特別空間をご提供します。
+              業種を問わず、事業の現場をまるごと担います。
             </p>
             <div className="flex gap-3 mt-6">
               <a
