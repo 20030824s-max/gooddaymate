@@ -50,8 +50,7 @@ const groups: Group[] = [
           "筑波国際カントリークラブに併設した1日2組限定グランピング施設の増築・コンセプト策定・設計をトータルプロデュース。ゴルフ場貸切×プライベートサウナ×BBQの複合体験施設。",
         location: "茨城・つくば市",
         href: "https://hole37.com/",
-        image:
-          "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80",
+        image: "/images/hole37-1.jpg",
       },
       {
         category: "宿泊施設 運営サポート",
@@ -76,8 +75,7 @@ const groups: Group[] = [
           "東京・新橋のカラオケバー「PORCO」をゼロから立ち上げ、現在も運営を担当。西新橋1丁目、深夜まで営業するナイトスポット。",
         location: "東京・新橋",
         href: "https://www.instagram.com/porco_shimbashi/",
-        image:
-          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80",
+        image: "/images/porco-1.jpg",
       },
       {
         category: "カラオケバー 運営",
@@ -86,8 +84,7 @@ const groups: Group[] = [
           "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営に携わる。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
         location: "東京・銀座",
         href: "https://www.instagram.com/s_ginza7/",
-        image:
-          "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=600&q=80",
+        image: "/images/ginzas-1.jpg",
       },
     ],
   },
