@@ -8,6 +8,7 @@ import {
   Building2,
   TrendingUp,
   Mail,
+  Laptop,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -41,17 +42,17 @@ const properties = [
   },
 ];
 
-// 2軸の事業内容
+// 事業内容 3軸
 const serviceAxes = [
   {
     axis: "Axis 01",
     title: "施設の立ち上げ・トータル運営",
     subtitle: "ゼロからの開業〜日々のオペレーションまで",
     description:
-      "宿泊ヴィラ・カラオケバーなど、事業の立ち上げを丸ごと担当。コンセプト策定・内装・スタッフ採用から、開業後の予約管理・日常運営まで一貫して引き受けます。",
+      "「やりたいこと」を持ち込んでもらえれば、あとはすべて引き受けます。コンセプト策定・設計・内装・スタッフ採用から、開業後の予約管理・日常運営まで、事業の立ち上げをまるごと担当。",
     items: [
-      "宿泊施設・貸別荘の企画・開発・運営",
-      "カラオケバーの立ち上げ・店舗運営",
+      "宿泊施設・貸別荘の企画・開発・自社運営",
+      "カラオケバー・飲食店の立ち上げ・店舗運営",
       "OTA多チャネル管理・収益最大化",
       "スタッフ採用・教育・オペレーション構築",
     ],
@@ -62,14 +63,28 @@ const serviceAxes = [
     title: "リゾート・娯楽施設のプロデュース・コンサル",
     subtitle: "新業態の開発から既存施設の収益改善まで",
     description:
-      "グランピング施設のトータルプロデュースや、ゴルフ場・飲食施設の経営改善まで幅広く対応。「こういう施設を作りたい」「収益が伸び悩んでいる」というオーナーの課題を解決します。",
+      "グランピング施設のトータルプロデュースから、ゴルフ場・飲食施設の経営改善まで幅広く対応。「こういう施設を作りたい」「収益が伸び悩んでいる」—オーナーの課題をともに解決します。",
     items: [
-      "グランピング施設の設計・コンセプトプロデュース",
+      "グランピング・リゾート施設の設計・プロデュース",
       "ゴルフ場・飲食施設の運営改善・経営コンサル",
       "OTA運用・料金戦略・予約システム導入",
       "新業態の開発・業態転換支援",
     ],
     icon: TrendingUp,
+  },
+  {
+    axis: "Axis 03",
+    title: "中小企業のDX化推進",
+    subtitle: "現場の業務をテクノロジーで、シンプルに変える",
+    description:
+      "「なんとなく非効率」「紙やFAXがまだ残っている」—そんな現場の課題をデジタルで解決します。大規模システムは不要。現場に合った、使いやすいDXを一緒に設計します。",
+    items: [
+      "業務フロー・課題の可視化・整理",
+      "予約・在庫・顧客管理システムの導入支援",
+      "SNS・Web活用によるマーケティング改善",
+      "AIツール・自動化の導入コンサルティング",
+    ],
+    icon: Laptop,
   },
 ];
 
@@ -188,10 +203,10 @@ export default function HomePage() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[
-                      "宿泊施設・貸別荘の立ち上げ・運営",
-                      "カラオケバーの立ち上げ・店舗運営",
-                      "グランピング・リゾートプロデュース",
+                      "施設の立ち上げ・トータル運営",
+                      "リゾート・娯楽施設のプロデュース",
                       "ゴルフ場・飲食施設の経営コンサル",
+                      "中小企業のDX化推進",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
@@ -221,13 +236,14 @@ export default function HomePage() {
                   事業内容
                 </h2>
                 <div className="divider-gold mx-auto mb-5" />
-                <p className="text-white/60 max-w-xl mx-auto">
-                  「まるごと任せたい」にも「相談だけしたい」にも対応する、2つのアプローチ。
+                <p className="text-white/60 max-w-2xl mx-auto">
+                  施設の立ち上げ・運営から、リゾートのプロデュース、中小企業のDX化まで。<br className="hidden sm:block" />
+                  「任せたい」も「相談したい」も、3つの軸でお応えします。
                 </p>
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceAxes.map((axis, i) => (
                 <AnimatedSection key={axis.axis} delay={i * 150}>
                   <div className="p-10 border border-white/10 hover:border-gold/40 transition-all duration-500 h-full">

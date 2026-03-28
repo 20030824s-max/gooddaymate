@@ -68,10 +68,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                "宿泊施設・貸別荘の立ち上げ・運営",
-                "カラオケバーの立ち上げ・運営",
-                "グランピング・リゾートプロデュース",
+                "施設の立ち上げ・トータル運営",
+                "リゾート・娯楽施設のプロデュース",
                 "ゴルフ場・飲食施設コンサル",
+                "中小企業のDX化推進",
               ].map((item) => (
                 <li key={item}>
                   <span className="text-white/70 text-sm">{item}</span>
