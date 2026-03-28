@@ -44,10 +44,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/sharrows"
+                  href="/shallows"
                   className="text-white/70 text-sm hover:text-white transition-colors duration-200"
                 >
-                  Sharrows
+                  Villa Shallows
                 </Link>
               </li>
               <li>
@@ -68,10 +68,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                "貸別荘の開発・設計",
-                "施設運営管理",
-                "DXコンサルティング",
-                "OTA運用支援",
+                "宿泊施設・貸別荘の立ち上げ・運営",
+                "カラオケバーの立ち上げ・運営",
+                "グランピング・リゾートプロデュース",
+                "ゴルフ場・飲食施設コンサル",
               ].map((item) => (
                 <li key={item}>
                   <span className="text-white/70 text-sm">{item}</span>

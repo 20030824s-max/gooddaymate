@@ -9,15 +9,15 @@ import {
   Wifi,
   Car,
   Waves,
+  Flame,
+  UtensilsCrossed,
   Wind,
   ChevronRight,
   Star,
   ArrowLeft,
+  PawPrint,
   Tv,
   Coffee,
-  Heart,
-  Sparkles,
-  Wine,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,48 +25,48 @@ import BookingWidget from "@/components/BookingWidget";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Aniversario | ビーチフロントプール＆BBQテラス付きの貸別荘",
+  title: "Villa Shallows | 海を望む、大人の隠れ家",
   description:
-    "沖縄・恩納村真栄田。ビーチフロントプール＆BBQテラス付きの丸ごと貸し切り別荘「Aniversario」。ベッドルーム3部屋・朝食あり。Booking.com評価9.0。",
+    "沖縄・恩納村前田。エメラルドの海を一望するプライベートヴィラ「Villa Shallows」。丸ごと貸し切り・ベッドルーム3部屋・無料専用駐車場。Booking.com評価9.6。",
 };
 
 const amenities = [
-  { icon: Waves, label: "ビーチフロントプール" },
-  { icon: Sparkles, label: "BBQテラス" },
-  { icon: Wine, label: "ウェルカムスパークリング" },
-  { icon: Heart, label: "記念日演出（要事前申込）" },
   { icon: Wifi, label: "高速Wi-Fi" },
   { icon: Car, label: "無料専用駐車場" },
+  { icon: Waves, label: "ビーチ近接" },
+  { icon: Flame, label: "BBQグリル" },
+  { icon: UtensilsCrossed, label: "フルキッチン" },
   { icon: Wind, label: "全室エアコン" },
+  { icon: PawPrint, label: "ペット可（要相談）" },
   { icon: Tv, label: "スマートTV" },
   { icon: Coffee, label: "コーヒーメーカー" },
-  { icon: Bath, label: "バスタブ完備" },
+  { icon: Bath, label: "バスタブ・ビデ完備" },
 ];
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&q=85",
-    alt: "Aniversario メインビュー",
+    src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    alt: "Villa Shallows 外観・テラス",
   },
   {
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    alt: "ジャグジー・テラス",
+    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
+    alt: "リビングルーム",
   },
   {
     src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    alt: "ベッドルーム",
+    alt: "メインベッドルーム",
   },
   {
     src: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80",
     alt: "バスルーム",
   },
   {
-    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-    alt: "リビングルーム",
+    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+    alt: "テラス・外観",
   },
 ];
 
-export default function AniversarioPage() {
+export default function ShallowsPage() {
   return (
     <>
       <Header />
@@ -74,6 +74,7 @@ export default function AniversarioPage() {
         {/* ── Hero Gallery ─────────────────────────────────────── */}
         <section className="pt-20">
           <div className="grid grid-cols-4 grid-rows-2 gap-1 h-[75vh] max-h-[600px]">
+            {/* Main image */}
             <div className="col-span-4 md:col-span-2 row-span-2 relative overflow-hidden">
               <Image
                 src={images[0].src}
@@ -83,8 +84,12 @@ export default function AniversarioPage() {
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
+            {/* Sub images (hidden on mobile) */}
             {images.slice(1, 5).map((img, i) => (
-              <div key={i} className="hidden md:block relative overflow-hidden">
+              <div
+                key={i}
+                className="hidden md:block relative overflow-hidden"
+              >
                 <Image
                   src={img.src}
                   alt={img.alt}
@@ -99,6 +104,7 @@ export default function AniversarioPage() {
         {/* ── Property Info ────────────────────────────────────── */}
         <section className="py-16 bg-sand-light">
           <div className="max-w-7xl mx-auto px-6">
+            {/* Breadcrumb */}
             <Link
               href="/#properties"
               className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-ocean-DEFAULT hover:text-ocean-light mb-8 transition-colors"
@@ -115,16 +121,17 @@ export default function AniversarioPage() {
                     Private Villa · Okinawa Onna-son
                   </p>
                   <h1 className="font-serif text-5xl md:text-6xl text-ocean-dark mb-3">
-                    Aniversario
+                    Villa Shallows
                   </h1>
                   <p className="text-xl text-gray-600 font-light mb-6">
-                    ビーチフロントプール＆BBQテラス付きの貸別荘
+                    海を望む、大人の隠れ家
                   </p>
 
+                  {/* Meta chips */}
                   <div className="flex flex-wrap items-center gap-4 mb-8">
                     <div className="flex items-center gap-1.5 text-sm text-gray-600">
                       <MapPin size={15} className="text-ocean-DEFAULT" />
-                      沖縄県恩納村真栄田
+                      沖縄県恩納村前田
                     </div>
                     <div className="flex items-center gap-1.5 text-sm text-gray-600">
                       <Users size={15} className="text-ocean-DEFAULT" />
@@ -148,48 +155,27 @@ export default function AniversarioPage() {
                         />
                       ))}
                       <span className="text-sm text-gray-500 ml-1">
-                        9.0 / 10（Booking.com）
+                        9.6 / 10（Booking.com）
                       </span>
                     </div>
                   </div>
                 </AnimatedSection>
 
-                {/* Special badge */}
-                <AnimatedSection delay={50}>
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {[
-                      "ビーチフロントプール",
-                      "BBQテラス付き",
-                      "記念日演出対応",
-                    ].map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center gap-1.5 text-[11px] border border-coral-DEFAULT/40 text-coral-dark px-3 py-1.5"
-                      >
-                        <Heart size={10} fill="currentColor" />
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </AnimatedSection>
-
                 {/* Description */}
                 <AnimatedSection delay={100}>
-                  <div className="mb-10">
+                  <div className="prose prose-sm max-w-none mb-10">
                     <p className="text-gray-700 leading-relaxed text-base mb-4">
-                      「Aniversario（アニベルサリオ）」—スペイン語で「記念日」を意味する名を持つこのヴィラは、
-                      沖縄・恩納村真栄田の海沿いに佇む、丸ごと貸し切りのプライベート別荘です。
-                      ビーチフロントプールとBBQテラスを備え、海を眺めながら過ごす贅沢な時間をお届けします。
+                      エメラルドグリーンに輝く沖縄の海を一望する、丸ごと貸し切りのプライベートヴィラです。
+                      大きな窓から広がる海の景色と、専用の駐車場・設備が整い、
+                      グループ旅行から家族旅行まで快適にお過ごしいただけます。
                     </p>
                     <p className="text-gray-700 leading-relaxed text-base mb-4">
-                      3つの寝室を持つ広々とした空間は、カップルはもちろん、
-                      家族やグループ旅行にも対応。白を基調とした清潔感ある内装と、
-                      朝食サービスでリゾート気分を満喫できます。
+                      3つの寝室はそれぞれ独立しており、フルキッチンとBBQグリルを完備。
+                      地元の食材を使ったバーベキューや自炊も存分に楽しめます。
                     </p>
                     <p className="text-gray-700 leading-relaxed text-base">
-                      結婚記念日・誕生日・ハネムーンなどの特別な節目には、
-                      記念日演出（要事前申込）もご相談ください。
-                      沖縄での大切な時間を、Good Day Mateが全力でサポートします。
+                      沖縄自動車道・石川ICより車で約10分。
+                      恩納村の豊かな自然に囲まれながら、プライベートな時間をお過ごしください。
                     </p>
                   </div>
                 </AnimatedSection>
@@ -217,40 +203,6 @@ export default function AniversarioPage() {
                   </div>
                 </AnimatedSection>
 
-                {/* Anniversary options */}
-                <AnimatedSection delay={180}>
-                  <div className="bg-coral-DEFAULT/5 border border-coral-DEFAULT/20 p-6 mb-10">
-                    <h3 className="font-serif text-xl text-ocean-dark mb-4 flex items-center gap-2">
-                      <Heart size={18} className="text-coral-DEFAULT" />
-                      記念日オプション（追加料金）
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {[
-                        "フラワーアレンジメント",
-                        "記念日ケーキ",
-                        "スパークリングワインボトル",
-                        "バルーンデコレーション",
-                        "夕食ケータリング手配",
-                        "フォトブック作成支援",
-                      ].map((opt) => (
-                        <div
-                          key={opt}
-                          className="flex items-center gap-2 text-sm text-gray-700"
-                        >
-                          <Sparkles
-                            size={12}
-                            className="text-coral-DEFAULT"
-                          />
-                          {opt}
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-xs text-gray-500 mt-4">
-                      ※ オプションは予約時またはチェックイン7日前までにご連絡ください
-                    </p>
-                  </div>
-                </AnimatedSection>
-
                 {/* House Rules */}
                 <AnimatedSection delay={200}>
                   <div className="border-t border-gray-200 pt-8 mb-10">
@@ -263,7 +215,7 @@ export default function AniversarioPage() {
                         "チェックアウト：〜11:00",
                         "喫煙：屋外のみ可",
                         "パーティー・大音量：不可",
-                        "ペット：不可",
+                        "ペット：要事前相談",
                         "追加ゲスト：要申告",
                       ].map((rule) => (
                         <div
@@ -290,9 +242,7 @@ export default function AniversarioPage() {
                           size={15}
                           className="text-ocean-DEFAULT mt-0.5 shrink-0"
                         />
-                        <span>
-                          沖縄県国頭郡恩納村（詳細住所はご予約後にお知らせします）
-                        </span>
+                        <span>沖縄県恩納村前田3378-9 2F（詳細はご予約後にお知らせします）</span>
                       </div>
                       <div className="flex items-start gap-3">
                         <Car
@@ -304,6 +254,7 @@ export default function AniversarioPage() {
                         </span>
                       </div>
                     </div>
+                    {/* Map placeholder */}
                     <div className="mt-6 h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
                       地図はご予約後に詳細をお送りします
                     </div>
@@ -311,14 +262,14 @@ export default function AniversarioPage() {
                 </AnimatedSection>
               </div>
 
-              {/* Right: Booking Widget */}
+              {/* Right: Booking Widget (sticky) */}
               <div className="lg:col-span-1">
                 <div className="sticky top-24">
                   <AnimatedSection delay={100}>
                     <div className="mb-4">
                       <div className="flex items-baseline gap-2">
                         <span className="font-serif text-3xl text-ocean-dark">
-                          ¥38,000
+                          ¥45,000
                         </span>
                         <span className="text-gray-500 text-sm">〜 / 泊</span>
                       </div>
@@ -327,11 +278,12 @@ export default function AniversarioPage() {
                       </p>
                     </div>
                     <BookingWidget
-                      propertyId="aniversario"
-                      propertyName="Aniversario"
+                      propertyId="shallows"
+                      propertyName="Villa Shallows"
                     />
                   </AnimatedSection>
 
+                  {/* Direct booking advantage */}
                   <AnimatedSection delay={150}>
                     <div className="mt-6 p-5 bg-ocean-dark text-white text-sm">
                       <p className="font-medium text-gold-DEFAULT text-[11px] tracking-[0.15em] uppercase mb-3">
@@ -340,7 +292,7 @@ export default function AniversarioPage() {
                       <ul className="space-y-2">
                         {[
                           "OTAより最大15%お得",
-                          "記念日オプションが頼みやすい",
+                          "直接ご要望を伺えます",
                           "キャンセルポリシーが柔軟",
                           "早期割引・連泊割引あり",
                         ].map((item) => (
@@ -372,15 +324,15 @@ export default function AniversarioPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  name: "鈴木 K.",
-                  date: "2025年1月",
-                  text: "記念日で利用しました。ウェルカムフルーツや細かい気遣いに感動。プライベートジャグジーで2人だけの特別な時間が過ごせました。一生の思い出になりました。",
+                  name: "田中 M.",
+                  date: "2024年12月",
+                  text: "プライベート感が最高でした。海まで歩いてすぐで、夕日を見ながらBBQができて最高の思い出になりました。",
                   rating: 5,
                 },
                 {
-                  name: "Haruka & Kenji",
-                  date: "2024年12月",
-                  text: "ハネムーンで利用。大理石のバスルームやジャグジー、すべてが最高でした。スタッフの方が花飾りも準備してくれて感激。また絶対に来ます！",
+                  name: "Yuki & Family",
+                  date: "2024年11月",
+                  text: "家族4人で利用。子供も大喜びで、広さも十分。キッチンが充実していて自炊もしやすかったです。",
                   rating: 5,
                 },
               ].map((review, i) => (
@@ -423,10 +375,10 @@ export default function AniversarioPage() {
                 もう一つの施設もご覧ください
               </h2>
               <p className="text-gray-600 text-sm mb-8">
-                オーシャンビュー・BBQグリル付きの「Villa Shallows」もチェック。
+                ビーチフロントプール付き・記念日に人気の「Aniversario」もチェック。
               </p>
-              <Link href="/shallows" className="btn-primary">
-                Villa Shallowsを見る
+              <Link href="/aniversario" className="btn-primary">
+                Aniversarioを見る
                 <ChevronRight size={16} />
               </Link>
             </AnimatedSection>

@@ -19,25 +19,25 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const properties = [
   {
-    id: "sharrows",
-    name: "Sharrows",
+    id: "shallows",
+    name: "Villa Shallows",
     tagline: "海を望む、大人の隠れ家",
     location: "沖縄・恩納村",
     image:
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
-    href: "/sharrows",
-    instagram: "@sharrows_okinawa", // TODO: 正式アカウントに差し替え
-    instagramUrl: "https://www.instagram.com/sharrows_okinawa",
+    href: "/shallows",
+    instagram: "@villashallows_okinawa",
+    instagramUrl: "https://www.instagram.com/villashallows_okinawa",
   },
   {
     id: "aniversario",
     name: "Aniversario",
-    tagline: "二人だけの、永遠の記念日",
+    tagline: "ビーチフロントプール付き、二人だけの特別な時間",
     location: "沖縄・恩納村",
     image:
       "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
     href: "/aniversario",
-    instagram: "@aniversario_okinawa", // TODO: 正式アカウントに差し替え
+    instagram: "@aniversario_okinawa",
     instagramUrl: "https://www.instagram.com/aniversario_okinawa",
   },
 ];
@@ -46,29 +46,29 @@ const properties = [
 const serviceAxes = [
   {
     axis: "Axis 01",
-    title: "トータル運用代行",
-    subtitle: "企画・設計からオペレーションまで",
+    title: "施設の立ち上げ・トータル運営",
+    subtitle: "ゼロからの開業〜日々のオペレーションまで",
     description:
-      "施設のコンセプト策定・設計・内装から、開業後の予約管理・スタッフ運営まで、一貫して代行します。オーナーはビジョンを持ち込むだけ。",
+      "宿泊ヴィラ・カラオケバーなど、事業の立ち上げを丸ごと担当。コンセプト策定・内装・スタッフ採用から、開業後の予約管理・日常運営まで一貫して引き受けます。",
     items: [
-      "コンセプト策定・設計監修",
-      "施設の開発・プロデュース",
-      "開業後の運営・スタッフ管理",
+      "宿泊施設・貸別荘の企画・開発・運営",
+      "カラオケバーの立ち上げ・店舗運営",
       "OTA多チャネル管理・収益最大化",
+      "スタッフ採用・教育・オペレーション構築",
     ],
     icon: Building2,
   },
   {
     axis: "Axis 02",
-    title: "コンサルティング・サポート",
-    subtitle: "既存施設の課題解決・収益改善",
+    title: "リゾート・娯楽施設のプロデュース・コンサル",
+    subtitle: "新業態の開発から既存施設の収益改善まで",
     description:
-      "既存の宿泊施設・飲食・リゾート事業の課題に対し、運営改善・収益改善・DX推進など、サポートに特化した形で関わります。",
+      "グランピング施設のトータルプロデュースや、ゴルフ場・飲食施設の経営改善まで幅広く対応。「こういう施設を作りたい」「収益が伸び悩んでいる」というオーナーの課題を解決します。",
     items: [
-      "運営改善・業務効率化",
-      "予約システム・DX導入支援",
-      "OTA運用・料金戦略",
-      "ゴルフ場・飲食施設の経営コンサル",
+      "グランピング施設の設計・コンセプトプロデュース",
+      "ゴルフ場・飲食施設の運営改善・経営コンサル",
+      "OTA運用・料金戦略・予約システム導入",
+      "新業態の開発・業態転換支援",
     ],
     icon: TrendingUp,
   },
@@ -77,19 +77,38 @@ const serviceAxes = [
 // 実績一覧
 const achievements = [
   {
-    category: "宿泊施設 運営",
-    name: "Sharrows / Aniversario",
-    detail: "沖縄・恩納村のプライベートヴィラ2棟を企画・開発・運営。",
+    category: "宿泊施設 自社運営",
+    name: "Villa Shallows / Aniversario",
+    detail:
+      "沖縄・恩納村のプライベートヴィラ2棟を企画・開発・自社運営。Booking.com評価9.6・9.0を獲得。",
     location: "沖縄・恩納村",
     image:
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80",
   },
   {
-    category: "グランピング プロデュース",
-    name: "HOLE 37",
+    category: "カラオケバー 立ち上げ・運営",
+    name: "PORCO（新橋）",
     detail:
-      "グランピング施設の増築、コンセプト策定、設計をトータルでプロデュース。",
-    location: "千葉県",
+      "東京・新橋のカラオケバー「PORCO」をゼロから立ち上げ、現在も運営を担当。西新橋1丁目、深夜まで営業するナイトスポット。",
+    location: "東京・新橋",
+    image:
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80",
+  },
+  {
+    category: "カラオケバー 運営",
+    name: "Ginza karaoke bar S（銀座）",
+    detail:
+      "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営に携わる。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
+    location: "東京・銀座",
+    image:
+      "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=600&q=80",
+  },
+  {
+    category: "グランピング プロデュース",
+    name: "HOLE37（ホールサーティーセブン）",
+    detail:
+      "筑波国際カントリークラブに併設した1日2組限定グランピング施設の増築・コンセプト策定・設計をトータルプロデュース。ゴルフ場貸切×プライベートサウナ×BBQの複合体験施設。",
+    location: "茨城・つくば市",
     image:
       "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80",
   },
@@ -100,15 +119,6 @@ const achievements = [
     location: "千葉県",
     image:
       "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=600&q=80",
-  },
-  {
-    category: "飲食・娯楽 コンサル",
-    name: "カラオケバー「ポルコ」上階 / 銀座「S」",
-    detail:
-      "新橋・カラオケバー「ポルコ」上階フロアの業態開発、および銀座のカラオケバー「S」の運営コンサルティング。",
-    location: "東京・新橋 / 銀座",
-    image:
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&q=80",
   },
   {
     category: "宿泊施設 運営サポート",
@@ -124,7 +134,7 @@ const achievements = [
 const upcomingProject = {
   name: "恩納村 新規リゾート施設",
   detail:
-    "シャローズ・アニベルサリオの隣接地に、ゼロからの企画として新施設を建設中。コンセプト策定から設計・運営まで一貫してプロデュース。",
+    "Villa Shallows・Aniversarioの隣接地に、ゼロからの企画として新施設を建設中。コンセプト策定から設計・運営まで一貫してプロデュース。",
   location: "沖縄・恩納村",
   image: null, // TODO: パース画像に差し替え
 };
@@ -225,19 +235,20 @@ export default function HomePage() {
                   </h2>
                   <div className="divider-gold mb-8" />
                   <p className="text-gray-700 leading-relaxed mb-5">
-                    Good Day Mateは、関東圏と沖縄を拠点に、宿泊施設・リゾートの「トータル運用代行」を行う会社です。
-                    ゼロからの企画・設計・開発から、開業後のオペレーションまで一貫して担います。
+                    Good Day Mateは、関東圏と沖縄を拠点に、宿泊施設・カラオケバーなどの「立ち上げ・トータル運営」を行う会社です。
+                    沖縄恩納村のプライベートヴィラ2棟（Villa Shallows・Aniversario）や、東京・新橋のカラオケバー「PORCO」など、
+                    コンセプト策定から日々のオペレーションまで一貫して担います。
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-8">
-                    また、既存施設の運営改善・収益最大化に特化した「コンサルティング・サポート」も提供しています。
-                    宿泊施設にとどまらず、ゴルフ場・グランピング・飲食・娯楽施設など、幅広い実績があります。
+                    グランピング施設のプロデュース（HOLE37・茨城）、ゴルフ場の経営コンサル、新業態の開発など、
+                    リゾート・娯楽領域における幅広い実績があります。
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[
-                      "宿泊施設トータル運用代行",
+                      "宿泊施設・貸別荘の立ち上げ・運営",
+                      "カラオケバーの立ち上げ・店舗運営",
                       "グランピング・リゾートプロデュース",
-                      "ゴルフ場の運営・コンサル",
-                      "飲食・娯楽施設コンサル",
+                      "ゴルフ場・飲食施設の経営コンサル",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
