@@ -10,6 +10,7 @@ type Achievement = {
   location: string;
   href: string | null;
   image: string;
+  imagePosition?: string;
 };
 
 type Group = {
@@ -76,6 +77,7 @@ const groups: Group[] = [
         location: "東京・新橋",
         href: "https://www.instagram.com/porco_shimbashi/",
         image: "/images/porco-1.jpg",
+        imagePosition: "object-top",
       },
       {
         category: "カラオケバー 運営",
@@ -115,7 +117,7 @@ function AchievementCard({ item }: { item: Achievement }) {
           src={item.image}
           alt={item.name}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className={`object-cover ${item.imagePosition ?? "object-center"} group-hover:scale-105 transition-transform duration-500`}
         />
         <div className="absolute top-3 left-3 bg-ocean-dark/80 text-white text-[9px] tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-sm">
           {item.category}
