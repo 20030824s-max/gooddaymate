@@ -11,6 +11,7 @@ type Achievement = {
   href: string | null;
   image: string;
   imagePosition?: string;
+  badge?: string;
 };
 
 type Group = {
@@ -88,6 +89,17 @@ const groups: Group[] = [
         href: "https://hole37.com/",
         image: "/images/hole37-1.jpg",
       },
+      {
+        category: "宿泊施設 開発中",
+        name: "恩納村 新規リゾート施設",
+        detail:
+          "Villa Shallows・Aniversarioの隣接地に、新施設を開発中。コンセプト策定から設計・運営まで一貫して自社でプロデュース。",
+        location: "沖縄・恩納村",
+        href: null,
+        image:
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80",
+        badge: "Coming Soon",
+      },
     ],
   },
   {
@@ -123,6 +135,11 @@ function AchievementCard({ item }: { item: Achievement }) {
         <div className="absolute top-3 left-3 bg-ocean-dark/80 text-white text-[9px] tracking-[0.2em] uppercase px-3 py-1.5 backdrop-blur-sm">
           {item.category}
         </div>
+        {item.badge && (
+          <div className="absolute top-3 right-3 bg-gold text-ocean-dark text-[9px] tracking-[0.15em] uppercase font-semibold px-2.5 py-1">
+            {item.badge}
+          </div>
+        )}
         {item.href && (
           <div className="absolute inset-0 bg-ocean-dark/0 group-hover:bg-ocean-dark/20 transition-colors duration-300 flex items-center justify-center">
             <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-xs tracking-widest uppercase border border-white/60 px-4 py-2">

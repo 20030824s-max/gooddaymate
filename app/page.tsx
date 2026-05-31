@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {
   ChevronRight,
-  MapPin,
   ArrowRight,
   Building2,
   TrendingUp,
@@ -60,15 +59,6 @@ const serviceAxes = [
     icon: Laptop,
   },
 ];
-
-// 進行中プロジェクト
-const upcomingProject = {
-  name: "恩納村 新規リゾート施設",
-  detail:
-    "Villa Shallows・Aniversarioの隣接地に、ゼロからの企画として新施設を建設中。コンセプト策定から設計・運営まで一貫してプロデュース。",
-  location: "沖縄・恩納村",
-  image: null, // TODO: パース画像に差し替え
-};
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
@@ -266,46 +256,6 @@ export default function HomePage() {
             </AnimatedSection>
 
             <AchievementsSection />
-
-            {/* 進行中プロジェクト */}
-            <AnimatedSection>
-              <div className="bg-ocean-dark text-white p-10 flex flex-col md:flex-row items-center gap-8">
-                <div className="md:w-1/3">
-                  {upcomingProject.image ? (
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={upcomingProject.image}
-                        alt={upcomingProject.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    // TODO: パース画像が届いたら上のImageに差し替え
-                    <div className="h-48 border border-white/20 flex items-center justify-center text-white/30 text-sm text-center px-4">
-                      パース画像
-                      <br />
-                      準備中
-                    </div>
-                  )}
-                </div>
-                <div className="md:w-2/3">
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">
-                    Coming Soon · New Project
-                  </p>
-                  <h3 className="font-serif text-2xl text-white mb-3">
-                    {upcomingProject.name}
-                  </h3>
-                  <p className="text-white/70 text-sm leading-relaxed mb-4">
-                    {upcomingProject.detail}
-                  </p>
-                  <div className="flex items-center gap-1 text-[11px] text-gold/70">
-                    <MapPin size={11} />
-                    {upcomingProject.location}
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </section>
 
