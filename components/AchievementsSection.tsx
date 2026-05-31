@@ -48,11 +48,12 @@ const groups: Group[] = [
         category: "宿泊施設 立ち上げサポート",
         name: "館山 新規宿泊施設",
         detail:
-          "千葉・館山に新規オープンした宿泊施設のコンセプト策定から立ち上げ・運営サポートまでを担当。",
+          "千葉・館山に新規オープン予定の宿泊施設。コンセプト策定から立ち上げ・運営サポートまでを担当予定。",
         location: "千葉・館山",
         href: null,
         image:
           "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80",
+        badge: "Coming Soon",
       },
     ],
   },
