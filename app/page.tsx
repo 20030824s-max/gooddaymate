@@ -97,7 +97,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#portfolio" className="btn-gold">
-                手がける事業を見る
+                事業案内を見る
                 <ChevronRight size={16} />
               </a>
               <a
@@ -240,16 +240,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ④ 手がける事業セクション ──────────────────────────────── */}
+        {/* ④ 事業案内セクション ──────────────────────────────── */}
         <section id="portfolio" className="py-24 bg-sand-light">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
                 <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
-                  Our Portfolio
+                  Our Business
                 </p>
                 <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-5">
-                  手がける事業
+                  事業案内
                 </h2>
                 <div className="divider-gold mx-auto" />
               </div>
