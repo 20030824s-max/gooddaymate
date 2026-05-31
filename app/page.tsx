@@ -46,43 +46,43 @@ const properties = [
 const serviceAxes = [
   {
     axis: "Axis 01",
-    title: "施設の立ち上げ・トータル運営",
-    subtitle: "ゼロからの開業〜日々のオペレーションまで",
+    title: "プロデュース・運営委託",
+    subtitle: "リゾートから飲食まで、立ち上げ〜委託運営まで",
     description:
-      "「やりたいこと」を持ち込んでもらえれば、あとはすべて引き受けます。コンセプト策定・設計・内装・スタッフ採用から、開業後の予約管理・日常運営まで、事業の立ち上げをまるごと担当。",
+      "「こういう施設を作りたい」「運営を任せたい」—コンセプト策定・設計・スタッフ採用から開業後の日常オペレーションまで、事業をまるごと引き受けます。",
     items: [
-      "宿泊施設・貸別荘の企画・開発・自社運営",
-      "カラオケバー・飲食店の立ち上げ・店舗運営",
-      "OTA多チャネル管理・収益最大化",
-      "スタッフ採用・教育・オペレーション構築",
+      "宿泊施設・グランピングのプロデュース",
+      "カラオケバー・飲食店の立ち上げ支援",
+      "施設の運営委託・現場マネジメント",
+      "OTA管理・料金戦略・収益改善コンサル",
     ],
     icon: Building2,
   },
   {
     axis: "Axis 02",
-    title: "リゾート・娯楽施設のプロデュース・コンサル",
-    subtitle: "新業態の開発から既存施設の収益改善まで",
+    title: "直運営事業",
+    subtitle: "自ら投資・開発・運営する自社施設",
     description:
-      "グランピング施設のトータルプロデュースから、ゴルフ場・飲食施設の経営改善まで幅広く対応。「こういう施設を作りたい」「収益が伸び悩んでいる」—オーナーの課題をともに解決します。",
+      "沖縄の貸別荘やグランピング施設など、自社で企画・開発・運営を行う事業です。現場で積み上げたノウハウが、プロデュース・コンサル事業の土台になっています。",
     items: [
-      "グランピング・リゾート施設の設計・プロデュース",
-      "ゴルフ場・飲食施設の運営改善・経営コンサル",
-      "OTA運用・料金戦略・予約システム導入",
-      "新業態の開発・業態転換支援",
+      "沖縄・恩納村の貸別荘2棟（Villa Shallows / Aniversario）",
+      "グランピング施設の開発・運営（HOLE37）",
+      "OTA多チャネル管理・ダイナミックプライシング",
+      "施設スタッフ採用・教育・品質管理",
     ],
     icon: TrendingUp,
   },
   {
     axis: "Axis 03",
-    title: "中小企業のDX化推進",
+    title: "DX・AI推進",
     subtitle: "現場の業務をテクノロジーで、シンプルに変える",
     description:
-      "「なんとなく非効率」「紙やFAXがまだ残っている」—そんな現場の課題をデジタルで解決します。大規模システムは不要。現場に合った、使いやすいDXを一緒に設計します。",
+      "自社施設で培ったIT運用の経験をもとに、中小企業のデジタル化・AI活用を支援します。大規模システムは不要。現場に合ったDXを一緒に設計します。",
     items: [
       "業務フロー・課題の可視化・整理",
-      "予約・在庫・顧客管理システムの導入支援",
-      "SNS・Web活用によるマーケティング改善",
+      "予約・顧客管理システムの導入支援",
       "AIツール・自動化の導入コンサルティング",
+      "SNS・Web活用によるマーケティング改善",
     ],
     icon: Laptop,
   },
@@ -133,8 +133,8 @@ export default function HomePage() {
               業種を問わず、Good Day Mateが事業の現場を担います。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#achievements" className="btn-gold">
-                実績を見る
+              <a href="#portfolio" className="btn-gold">
+                手がける事業を見る
                 <ChevronRight size={16} />
               </a>
               <a
@@ -203,10 +203,10 @@ export default function HomePage() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[
-                      "施設の立ち上げ・トータル運営",
-                      "リゾート・娯楽施設のプロデュース",
-                      "ゴルフ場・飲食施設の経営コンサル",
-                      "中小企業のDX化推進",
+                      "施設のプロデュース・運営委託",
+                      "自社施設の直運営",
+                      "グランピング・宿泊施設の開発",
+                      "中小企業のDX・AI推進",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
@@ -277,16 +277,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ④ 実績セクション ────────────────────────────────────── */}
-        <section id="achievements" className="py-24 bg-sand-light">
+        {/* ④ 手がける事業セクション ──────────────────────────────── */}
+        <section id="portfolio" className="py-24 bg-sand-light">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="text-center mb-16">
                 <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
-                  Achievements
+                  Our Portfolio
                 </p>
                 <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-5">
-                  実績
+                  手がける事業
                 </h2>
                 <div className="divider-gold mx-auto" />
               </div>

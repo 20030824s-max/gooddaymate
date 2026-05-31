@@ -21,53 +21,8 @@ type Group = {
 
 const groups: Group[] = [
   {
-    label: "リゾート・宿泊",
-    en: "Resort & Stay",
-    items: [
-      {
-        category: "宿泊施設 自社運営",
-        name: "Villa Shallows",
-        detail:
-          "沖縄・恩納村のオーシャンビュープライベートヴィラ。丸ごと貸し切り・ベッドルーム3部屋。Booking.com評価9.6。",
-        location: "沖縄・恩納村",
-        href: "/shallows",
-        image:
-          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80",
-      },
-      {
-        category: "宿泊施設 自社運営",
-        name: "Aniversario",
-        detail:
-          "沖縄・恩納村のビーチフロントプール＆BBQテラス付き貸別荘。ベッドルーム3部屋。Booking.com評価9.0。",
-        location: "沖縄・恩納村",
-        href: "/aniversario",
-        image:
-          "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80",
-      },
-      {
-        category: "グランピング プロデュース",
-        name: "HOLE37（ホールサーティーセブン）",
-        detail:
-          "筑波国際カントリークラブに併設した1日2組限定グランピング施設の増築・コンセプト策定・設計をトータルプロデュース。ゴルフ場貸切×プライベートサウナ×BBQの複合体験施設。",
-        location: "茨城・つくば市",
-        href: "https://hole37.com/",
-        image: "/images/hole37-1.jpg",
-      },
-      {
-        category: "宿泊施設 運営サポート",
-        name: "館山 新規宿泊施設",
-        detail:
-          "館山に新規オープンした宿泊施設の立ち上げ・運営サポートを担当。",
-        location: "千葉・館山",
-        href: null,
-        image:
-          "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80",
-      },
-    ],
-  },
-  {
-    label: "バー・ナイトライフ",
-    en: "Bar & Nightlife",
+    label: "プロデュース・運営委託",
+    en: "Produce & Operations",
     items: [
       {
         category: "カラオケバー 立ち上げ・運営",
@@ -80,25 +35,71 @@ const groups: Group[] = [
         imagePosition: "object-top",
       },
       {
-        category: "カラオケバー 運営",
+        category: "カラオケバー 運営委託",
         name: "Ginza karaoke bar S（銀座）",
         detail:
-          "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営に携わる。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
+          "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営受託。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
         location: "東京・銀座",
         href: "https://www.instagram.com/s_ginza7/",
         image: "/images/ginzas-1.jpg",
       },
+      {
+        category: "宿泊施設 立ち上げサポート",
+        name: "館山 新規宿泊施設",
+        detail:
+          "千葉・館山に新規オープンした宿泊施設のコンセプト策定から立ち上げ・運営サポートまでを担当。",
+        location: "千葉・館山",
+        href: null,
+        image:
+          "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80",
+      },
     ],
   },
   {
-    label: "ゴルフ",
-    en: "Golf",
+    label: "直運営事業",
+    en: "Direct Operations",
     items: [
       {
-        category: "ゴルフ場 運営・コンサル",
-        name: "勝浦国際ゴルフ倶楽部",
-        detail: "ゴルフ場の運営管理・経営コンサルティングを担当。",
-        location: "千葉県",
+        category: "宿泊施設 自社直運営",
+        name: "Villa Shallows",
+        detail:
+          "沖縄・恩納村のオーシャンビュープライベートヴィラ。丸ごと貸し切り・ベッドルーム3部屋。Booking.com評価9.6。",
+        location: "沖縄・恩納村",
+        href: "/shallows",
+        image:
+          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80",
+      },
+      {
+        category: "宿泊施設 自社直運営",
+        name: "Aniversario",
+        detail:
+          "沖縄・恩納村のビーチフロントプール＆BBQテラス付き貸別荘。ベッドルーム3部屋。Booking.com評価9.0。",
+        location: "沖縄・恩納村",
+        href: "/aniversario",
+        image:
+          "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80",
+      },
+      {
+        category: "グランピング 自社プロデュース・運営",
+        name: "HOLE37（ホールサーティーセブン）",
+        detail:
+          "筑波国際カントリークラブに自社プロデュースで開業した1日2組限定グランピング施設。ゴルフ場貸切×プライベートサウナ×BBQの複合体験。",
+        location: "茨城・つくば市",
+        href: "https://hole37.com/",
+        image: "/images/hole37-1.jpg",
+      },
+    ],
+  },
+  {
+    label: "DX・AI推進",
+    en: "DX & AI",
+    items: [
+      {
+        category: "DX推進 コンサルティング",
+        name: "筑波国際カントリークラブ",
+        detail:
+          "茨城・つくば市のゴルフ場。予約管理・業務フローのデジタル化をはじめ、AI活用による現場DXを推進中。HOLE37グランピング施設の展開も同施設内で手がける。",
+        location: "茨城・つくば市",
         href: null,
         image:
           "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=600&q=80",
