@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ChevronRight,
   MapPin,
-  Instagram,
   ArrowRight,
   Building2,
   TrendingUp,
@@ -17,44 +15,19 @@ import AchievementsSection from "@/components/AchievementsSection";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
-const properties = [
-  {
-    id: "shallows",
-    name: "Villa Shallows",
-    tagline: "海を望む、大人の隠れ家",
-    location: "沖縄・恩納村",
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
-    href: "/shallows",
-    instagram: "@villashallows_okinawa",
-    instagramUrl: "https://www.instagram.com/villashallows_okinawa",
-  },
-  {
-    id: "aniversario",
-    name: "Aniversario",
-    tagline: "ビーチフロントプール付き、二人だけの特別な時間",
-    location: "沖縄・恩納村",
-    image:
-      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80",
-    href: "/aniversario",
-    instagram: "@aniversario_okinawa",
-    instagramUrl: "https://www.instagram.com/aniversario_okinawa",
-  },
-];
-
 // 事業内容 3軸
 const serviceAxes = [
   {
     axis: "Axis 01",
-    title: "プロデュース・運営委託",
-    subtitle: "リゾートから飲食まで、立ち上げ〜委託運営まで",
+    title: "プロデュース・コンサル",
+    subtitle: "構想から開業まで、まるごとプロデュース",
     description:
-      "「こういう施設を作りたい」「運営を任せたい」—コンセプト策定・設計・スタッフ採用から開業後の日常オペレーションまで、事業をまるごと引き受けます。",
+      "「こういう施設を作りたい」という構想を持ち込んでもらえれば、コンセプト策定・設計・スタッフ採用・開業準備まで引き受けます。開業後の日常運営はオーナー側が担いますが、OTA管理や収益改善など継続的なコンサルも提供します。",
     items: [
-      "宿泊施設・グランピングのプロデュース",
-      "カラオケバー・飲食店の立ち上げ支援",
-      "施設の運営委託・現場マネジメント",
-      "OTA管理・料金戦略・収益改善コンサル",
+      "施設のコンセプト策定・設計・内装監修",
+      "OTA登録・料金設計・予約システム構築",
+      "スタッフ採用・教育・オペレーション設計",
+      "開業後の収益改善・マーケティングコンサル",
     ],
     icon: Building2,
   },
@@ -336,80 +309,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ⑤ 運営施設セクション ────────────────────────────────── */}
-        <section id="properties" className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <AnimatedSection>
-              <div className="text-center mb-16">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-3">
-                  Our Properties
-                </p>
-                <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-5">
-                  運営施設
-                </h2>
-                <div className="divider-gold mx-auto mb-5" />
-                <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-                  沖縄・恩納村で自社運営するプライベートヴィラ。
-                  各施設の詳細・ご予約は施設ページからどうぞ。
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {properties.map((property, i) => (
-                <AnimatedSection key={property.id} delay={i * 150}>
-                  <div className="group bg-white overflow-hidden shadow-lg">
-                    {/* 画像 */}
-                    <div className="relative h-72 overflow-hidden">
-                      <Image
-                        src={property.image}
-                        alt={property.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
-                    {/* コンテンツ */}
-                    <div className="p-8">
-                      <p className="text-[10px] tracking-[0.25em] uppercase text-gold mb-2">
-                        {property.tagline}
-                      </p>
-                      <h3 className="font-serif text-3xl text-ocean-dark mb-3">
-                        {property.name}
-                      </h3>
-
-                      <div className="flex items-center gap-1 text-[11px] text-gray-500 mb-6">
-                        <MapPin size={12} className="text-ocean" />
-                        {property.location}
-                      </div>
-
-                      <div className="flex items-center gap-4 border-t border-gray-100 pt-5">
-                        <Link
-                          href={property.href}
-                          className="flex-1 btn-primary text-center justify-center"
-                        >
-                          施設の詳細・予約
-                          <ArrowRight size={14} />
-                        </Link>
-                        <a
-                          href={property.instagramUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-[11px] text-gray-500 hover:text-ocean transition-colors"
-                        >
-                          <Instagram size={14} />
-                          {property.instagram}
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ⑥ お問い合わせCTA ─────────────────────────────────── */}
+        {/* ⑤ お問い合わせCTA ─────────────────────────────────── */}
         <section
           id="contact"
           className="relative py-28 flex items-center justify-center overflow-hidden"
