@@ -84,7 +84,7 @@ const groups: Group[] = [
     ],
   },
   {
-    label: "施設プロデュース＆経営コンサル",
+    label: "施設プロデュース＆経営コンサルティング",
     en: "Produce & Consulting",
     items: [
       {
