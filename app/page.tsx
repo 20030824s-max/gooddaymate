@@ -18,34 +18,20 @@ import AchievementsSection from "@/components/AchievementsSection";
 const serviceAxes = [
   {
     axis: "Axis 01",
-    title: "プロデュース・コンサル",
-    subtitle: "構想から開業まで、まるごとプロデュース",
-    description:
-      "「こういう施設を作りたい」という構想を持ち込んでもらえれば、コンセプト策定・設計・スタッフ採用・開業準備まで引き受けます。開業後の日常運営はオーナー側が担いますが、OTA管理や収益改善など継続的なコンサルも提供します。",
-    items: [
-      "施設のコンセプト策定・設計・内装監修",
-      "OTA登録・料金設計・予約システム構築",
-      "スタッフ採用・教育・オペレーション設計",
-      "開業後の収益改善・マーケティングコンサル",
-    ],
-    icon: Building2,
-  },
-  {
-    axis: "Axis 02",
-    title: "直運営事業",
+    title: "宿泊運営事業",
     subtitle: "自ら投資・開発・運営する自社施設",
     description:
-      "沖縄の貸別荘やグランピング施設など、自社で企画・開発・運営を行う事業です。現場で積み上げたノウハウが、プロデュース・コンサル事業の土台になっています。",
+      "沖縄の貸別荘やグランピング施設など、自社で企画・開発・運営を行う事業です。現場で積み上げたノウハウが、プロデュース・コンサル事業の土台にもなっています。",
     items: [
       "沖縄・恩納村の貸別荘2棟（Villa Shallows / Aniversario）",
       "グランピング施設の開発・運営（HOLE37）",
       "OTA多チャネル管理・ダイナミックプライシング",
       "施設スタッフ採用・教育・品質管理",
     ],
-    icon: TrendingUp,
+    icon: Building2,
   },
   {
-    axis: "Axis 03",
+    axis: "Axis 02",
     title: "DX・AI推進",
     subtitle: "現場の業務をテクノロジーで、シンプルに変える",
     description:
@@ -57,6 +43,20 @@ const serviceAxes = [
       "SNS・Web活用によるマーケティング改善",
     ],
     icon: Laptop,
+  },
+  {
+    axis: "Axis 03",
+    title: "施設プロデュース＆経営コンサル",
+    subtitle: "構想から開業まで、まるごとプロデュース",
+    description:
+      "「こういう施設を作りたい」という構想を持ち込んでもらえれば、コンセプト策定・設計・スタッフ採用・開業準備まで引き受けます。開業後はOTA管理や収益改善など継続的なコンサルも提供します。",
+    items: [
+      "施設のコンセプト策定・設計・内装監修",
+      "OTA登録・料金設計・予約システム構築",
+      "スタッフ採用・教育・オペレーション設計",
+      "開業後の収益改善・マーケティングコンサル",
+    ],
+    icon: TrendingUp,
   },
 ];
 
@@ -166,10 +166,10 @@ export default function HomePage() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[
-                      "施設のプロデュース・運営委託",
-                      "自社施設の直運営",
-                      "グランピング・宿泊施設の開発",
-                      "中小企業のDX・AI推進",
+                      "宿泊運営事業（沖縄・茨城）",
+                      "DX・AI推進コンサルティング",
+                      "施設プロデュース＆経営コンサル",
+                      "カラオケバー・飲食店の立ち上げ支援",
                     ].map((item) => (
                       <div key={item} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />

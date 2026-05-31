@@ -22,44 +22,8 @@ type Group = {
 
 const groups: Group[] = [
   {
-    label: "プロデュース・運営委託",
-    en: "Produce & Operations",
-    items: [
-      {
-        category: "カラオケバー 立ち上げ・運営",
-        name: "PORCO（新橋）",
-        detail:
-          "東京・新橋のカラオケバー「PORCO」をゼロから立ち上げ、現在も運営を担当。西新橋1丁目、深夜まで営業するナイトスポット。",
-        location: "東京・新橋",
-        href: "https://www.instagram.com/porco_shimbashi/",
-        image: "/images/porco-1.jpg",
-        imagePosition: "object-top",
-      },
-      {
-        category: "カラオケバー 運営委託",
-        name: "Ginza karaoke bar S（銀座）",
-        detail:
-          "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営受託。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
-        location: "東京・銀座",
-        href: "https://www.instagram.com/s_ginza7/",
-        image: "/images/ginzas-1.jpg",
-      },
-      {
-        category: "宿泊施設 立ち上げサポート",
-        name: "館山 新規宿泊施設",
-        detail:
-          "千葉・館山に新規オープン予定の宿泊施設。コンセプト策定から立ち上げ・運営サポートまでを担当予定。",
-        location: "千葉・館山",
-        href: null,
-        image:
-          "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80",
-        badge: "Coming Soon",
-      },
-    ],
-  },
-  {
-    label: "直運営事業",
-    en: "Direct Operations",
+    label: "宿泊運営事業",
+    en: "Hospitality & Stay",
     items: [
       {
         category: "宿泊施設 自社直運営",
@@ -116,6 +80,42 @@ const groups: Group[] = [
         href: null,
         image:
           "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=600&q=80",
+      },
+    ],
+  },
+  {
+    label: "施設プロデュース＆経営コンサル",
+    en: "Produce & Consulting",
+    items: [
+      {
+        category: "カラオケバー 立ち上げ・運営",
+        name: "PORCO（新橋）",
+        detail:
+          "東京・新橋のカラオケバー「PORCO」をゼロから立ち上げ、現在も運営を担当。西新橋1丁目、深夜まで営業するナイトスポット。",
+        location: "東京・新橋",
+        href: "https://www.instagram.com/porco_shimbashi/",
+        image: "/images/porco-1.jpg",
+        imagePosition: "object-top",
+      },
+      {
+        category: "カラオケバー 運営委託",
+        name: "Ginza karaoke bar S（銀座）",
+        detail:
+          "東京・銀座7丁目のカラオケバー「Ginza karaoke bar S」の運営受託。Googleマップ評価★5.0（37件）。踊れる空間・グリーンウォールが特徴。",
+        location: "東京・銀座",
+        href: "https://www.instagram.com/s_ginza7/",
+        image: "/images/ginzas-1.jpg",
+      },
+      {
+        category: "宿泊施設 立ち上げサポート",
+        name: "館山 新規宿泊施設",
+        detail:
+          "千葉・館山に新規オープン予定の宿泊施設。コンセプト策定から立ち上げ・運営サポートまでを担当予定。",
+        location: "千葉・館山",
+        href: null,
+        image:
+          "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80",
+        badge: "Coming Soon",
       },
     ],
   },
