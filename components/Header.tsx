@@ -5,10 +5,11 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#about", label: "会社概要" },
-  { href: "#properties", label: "施設紹介" },
-  { href: "#services", label: "事業内容" },
-  { href: "#contact", label: "お問い合わせ" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "事業内容" },
+  { href: "/#portfolio", label: "事業案内" },
+  { href: "/company", label: "会社概要" },
+  { href: "/#contact", label: "お問い合わせ" },
 ];
 
 export default function Header() {
@@ -53,7 +54,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={`text-[11px] font-sans tracking-[0.2em] uppercase transition-all duration-300 hover:opacity-70 ${
@@ -61,10 +62,10 @@ export default function Header() {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#properties"
+          <Link
+            href="/shallows"
             className={`text-[11px] font-sans tracking-[0.2em] uppercase px-5 py-2.5 border transition-all duration-300 ${
               isScrolled
                 ? "border-ocean text-ocean hover:bg-ocean hover:text-white"
@@ -72,7 +73,7 @@ export default function Header() {
             }`}
           >
             予約する
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -95,22 +96,22 @@ export default function Header() {
       >
         <nav className="px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
               className="text-[11px] font-sans tracking-[0.2em] uppercase text-ocean-dark py-2 border-b border-gray-100 hover:text-ocean-light transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#properties"
+          <Link
+            href="/shallows"
             onClick={() => setIsMenuOpen(false)}
             className="btn-primary text-center mt-2"
           >
             予約する
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
