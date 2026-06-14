@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "事業内容" },
   { href: "/#portfolio", label: "事業案内" },
+  { href: "/team", label: "メンバー" },
   { href: "/company", label: "会社概要" },
   { href: "/#contact", label: "お問い合わせ" },
 ];
