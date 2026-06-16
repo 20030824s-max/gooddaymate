@@ -152,7 +152,8 @@ export default function HomePage() {
                   <p className="text-gray-700 leading-relaxed mb-5">
                     Good Day Mateは、東京・沖縄を拠点に、事業に現場から関わる会社です。
                     沖縄でヴィラを2棟運営し、新橋でカラオケバーを立ち上げ、
-                    つくばのゴルフ場ではグランピング施設のプロデュースとDX推進を手がけてきました。
+                    つくばではグランピング施設をプロデュース。
+                    中小企業のDX・AI推進にも幅広く対応しています。
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-8">
                     自分たちで運営することもあれば、立ち上げだけ引き受けて運営を任せることも、
