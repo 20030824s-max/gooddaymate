@@ -86,14 +86,14 @@ export default function HomePage() {
               Good Day Mate · Business Execution
             </p>
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-light leading-tight tracking-wide mb-6 animate-slide-up">
-              事業を、
+              事業に、
               <br />
-              まるごと動かす。
+              現場から関わる。
             </h1>
             <p className="text-white/80 text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
-              企画・開発・運営・DX。
+              沖縄のヴィラ運営から、新橋のカラオケバー立ち上げ、
               <br />
-              業種を問わず、Good Day Mateが事業の現場を担います。
+              つくばのグランピングプロデュースまで。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#portfolio" className="btn-gold">
@@ -146,23 +146,17 @@ export default function HomePage() {
 
               <AnimatedSection delay={200}>
                 <div>
-                  <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-4">
+                  <p className="text-[11px] tracking-[0.3em] uppercase text-gold mb-6">
                     About Us
                   </p>
-                  <h2 className="heading-display text-4xl md:text-5xl text-ocean-dark mb-4 leading-tight">
-                    考えるだけでなく、
-                    <br />
-                    動く。
-                  </h2>
-                  <div className="divider-gold mb-8" />
                   <p className="text-gray-700 leading-relaxed mb-5">
-                    Good Day Mateは、関東・沖縄を拠点に「事業をまるごと動かす」会社です。
-                    宿泊ヴィラの自社運営、カラオケバーの立ち上げ、グランピング施設のプロデュースなど、
-                    机上の提案ではなく、自分たちが現場に入り込んで実行してきた実績があります。
+                    Good Day Mateは、東京・沖縄を拠点に、事業に現場から関わる会社です。
+                    沖縄でヴィラを2棟運営し、新橋でカラオケバーを立ち上げ、
+                    つくばのゴルフ場ではグランピング施設のプロデュースとDX推進を手がけてきました。
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-8">
-                    ゴルフ場の経営コンサルから中小企業のDX化まで、業種を問わず対応。
-                    「やりたいことがある」「現状を変えたい」というオーナーの思いを、実行に変えます。
+                    自分たちで運営することもあれば、立ち上げだけ引き受けて運営を任せることも、
+                    デジタル化の相談だけ受けることもあります。
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {[
