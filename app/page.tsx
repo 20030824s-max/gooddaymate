@@ -91,9 +91,9 @@ export default function HomePage() {
               現場から関わる。
             </h1>
             <p className="text-white/80 text-lg font-light leading-relaxed max-w-xl mx-auto mb-10">
-              沖縄のヴィラ運営から、新橋のカラオケバー立ち上げ、
+              宿泊運営・施設プロデュース・DX推進。
               <br />
-              つくばのグランピングプロデュースまで。
+              業種を問わず、事業に関わっています。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#portfolio" className="btn-gold">
