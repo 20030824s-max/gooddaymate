@@ -45,16 +45,16 @@ const amenities = [
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    alt: "Villa Shallows 外観・テラス",
+    src: "/images/shallows-2.jpg",
+    alt: "Villa Shallows リビング・オーシャンビュー",
   },
   {
-    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-    alt: "リビングルーム",
+    src: "/images/shallows-1.jpg",
+    alt: "Villa Shallows ベッドルーム・オーシャンビュー",
   },
   {
-    src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    alt: "メインベッドルーム",
+    src: "/images/shallows-3.jpg",
+    alt: "Villa Shallows バルコニー",
   },
   {
     src: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80",

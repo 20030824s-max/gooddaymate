@@ -45,12 +45,12 @@ const amenities = [
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&q=85",
-    alt: "Aniversario メインビュー",
+    src: "/images/aniversario-1.jpg",
+    alt: "Aniversario プール・オーシャンビュー",
   },
   {
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    alt: "ジャグジー・テラス",
+    src: "/images/aniversario-2.jpg",
+    alt: "Aniversario プールテラス",
   },
   {
     src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",

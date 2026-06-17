@@ -32,8 +32,7 @@ const groups: Group[] = [
           "沖縄・恩納村のオーシャンビュープライベートヴィラ。丸ごと貸し切り・ベッドルーム3部屋。Booking.com評価9.6。",
         location: "沖縄・恩納村",
         href: "/shallows",
-        image:
-          "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80",
+        image: "/images/shallows-2.jpg",
       },
       {
         category: "宿泊施設 自社直運営",
@@ -42,8 +41,7 @@ const groups: Group[] = [
           "沖縄・恩納村のビーチフロントプール＆BBQテラス付き貸別荘。ベッドルーム3部屋。Booking.com評価9.0。",
         location: "沖縄・恩納村",
         href: "/aniversario",
-        image:
-          "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80",
+        image: "/images/aniversario-1.jpg",
       },
       {
         category: "グランピング 自社プロデュース・運営",
